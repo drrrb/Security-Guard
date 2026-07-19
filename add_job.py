@@ -1,6 +1,20 @@
 import streamlit as st
 st.markdown("""
 <style>
+    /* فرض اتجاه النص من اليمين لليسار */
+    .stApp {
+        direction: rtl !important;
+    }
+
+    /* نمنع التكسير نهائياً، ونسمح بظهور شريط تمرير أفقي بدلاً من تشوه الحروف */
+    [data-testid="stMarkdownContainer"] {
+        white-space: pre !important; 
+        overflow-x: auto !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+<style>
     /* ضبط اتجاه الموقع ليكون من اليمين لليسار */
     .stApp {
         direction: rtl;
