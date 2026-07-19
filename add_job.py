@@ -1,4 +1,17 @@
 import streamlit as st
+st.markdown("""
+<style>
+    /* ضبط اتجاه الموقع ليكون من اليمين لليسار */
+    .stApp {
+        direction: rtl;
+    }
+    /* منع تكسير الكلمات العربية وظهورها بشكل عمودي */
+    * {
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+</style>
+""", unsafe_allow_html=True)
 from supabase import create_client, Client
 import urllib.parse
 
